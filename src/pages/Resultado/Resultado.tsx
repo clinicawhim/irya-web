@@ -16,6 +16,9 @@ import { isPacienteSubscriber } from "../../utils/session";
 import iryaSaudando from "../../../assets/irya-saudando.png";
 
 const PILAR_COLORS = ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF", "#FF9F40"];
+const IRYA_WHATSAPP_URL = `https://wa.me/5511921999504?text=${encodeURIComponent(
+  "Irya, finalizei o preenchimento do MEV",
+)}`;
 
 type FaixaNarrativa = {
   badge: string;
@@ -468,6 +471,25 @@ const Resultado: React.FC = () => {
               label="Desbloquear meu plano personalizado"
               className="mt-5"
             />
+          </section>
+        )}
+
+        {status?.primeiroQuestionario && (
+          <section className="mt-8 rounded-[32px] border border-[#f1e3b9] bg-white/88 p-5 text-center shadow-[0_8px_24px_rgba(74,93,79,0.14)] sm:p-6">
+            <h4 className="font-['Libre_Baskerville',serif] text-xl font-normal text-[#4a5d4f] sm:text-2xl">
+              Finalize seu primeiro MEV com a Irya
+            </h4>
+            <p className="mt-2 text-sm leading-relaxed text-[#4a5d4f] sm:text-base">
+              Avise pelo WhatsApp que você concluiu o preenchimento.
+            </p>
+            <a
+              href={IRYA_WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-[50px] border border-[#3a4d3f] bg-[#3a4d3f] px-6 py-[14px] font-['Libre_Baskerville',serif] text-base font-bold text-white shadow-[0_8px_24px_rgba(74,93,79,0.24)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#6a8d60] hover:shadow-[0_12px_28px_rgba(74,93,79,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7c9d72]/25"
+            >
+              Chamar a Irya no WhatsApp
+            </a>
           </section>
         )}
       </div>

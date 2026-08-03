@@ -22,6 +22,7 @@ export interface ResultadoData {
 
 interface QuestionarioStatus {
   podeResponder: boolean;
+  primeiroQuestionario: boolean;
   resultadoAnterior: ResultadoData | null;
   pesoAtualKg: number | null;
   variacaoPesoKg: number | null;
